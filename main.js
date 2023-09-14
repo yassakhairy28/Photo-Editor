@@ -18,7 +18,7 @@ const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext("2d")
 
 function resetValue () {
-  img.style.filter = 'none'
+  ctx.filter = 'none'
   
   sturate.value = "100"
   contrast.value = "100"
@@ -27,6 +27,7 @@ function resetValue () {
   grayscale.value = "0"
   blur.value = "0"
   hueRotate.value = "0"
+  ctx.drawImage(img,0,0,canvas.height,canvas.width)
 }
 window.onload = function () {
   download.style.display = "none"
